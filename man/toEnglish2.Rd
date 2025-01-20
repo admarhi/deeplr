@@ -2,6 +2,14 @@
 % Please edit documentation in R/to_lang2.R
 \name{toEnglish2}
 \alias{toEnglish2}
+\alias{toGerman2}
+\alias{toFrench2}
+\alias{toItalian2}
+\alias{toSpanish2}
+\alias{toJapanese2}
+\alias{toRussian2}
+\alias{toChinese2}
+\alias{toPortuguese2}
 \title{Translate texts into English using DeepL API Free}
 \usage{
 toEnglish2(
@@ -12,45 +20,123 @@ toEnglish2(
   get_detect = FALSE,
   auth_key = "your_key"
 )
+
+toGerman2(
+  text,
+  source_lang = NULL,
+  split_sentences = TRUE,
+  preserve_formatting = FALSE,
+  get_detect = FALSE,
+  auth_key = "your_key"
+)
+
+toFrench2(
+  text,
+  source_lang = NULL,
+  split_sentences = TRUE,
+  preserve_formatting = FALSE,
+  get_detect = FALSE,
+  auth_key = "your_key"
+)
+
+toItalian2(
+  text,
+  source_lang = NULL,
+  split_sentences = TRUE,
+  preserve_formatting = FALSE,
+  get_detect = FALSE,
+  auth_key = "your_key"
+)
+
+toSpanish2(
+  text,
+  source_lang = NULL,
+  split_sentences = TRUE,
+  preserve_formatting = FALSE,
+  get_detect = FALSE,
+  auth_key = "your_key"
+)
+
+toJapanese2(
+  text,
+  source_lang = NULL,
+  split_sentences = TRUE,
+  preserve_formatting = FALSE,
+  get_detect = FALSE,
+  auth_key = "your_key"
+)
+
+toRussian2(
+  text,
+  source_lang = NULL,
+  split_sentences = TRUE,
+  preserve_formatting = FALSE,
+  get_detect = FALSE,
+  auth_key = "your_key"
+)
+
+toChinese2(
+  text,
+  source_lang = NULL,
+  split_sentences = TRUE,
+  preserve_formatting = FALSE,
+  get_detect = FALSE,
+  auth_key = "your_key"
+)
+
+toPortuguese2(
+  text,
+  source_lang = NULL,
+  split_sentences = TRUE,
+  preserve_formatting = FALSE,
+  get_detect = FALSE,
+  auth_key = "your_key"
+)
 }
 \arguments{
-\item{text}{character vector to be translated. Only UTF8-encoded plain text is supported.
-An element can contain several sentences, but should not exceed 30kbytes.}
+\item{text}{character vector to be translated. Only UTF8-encoded plain text
+is supported. An element can contain several sentences, but should not
+exceed 30kbytes.}
 
-\item{source_lang}{language of the text to be translated. If parameter \code{is.null},
-the API guesses the language of the source. If input is of length 1, the same source
-language is applied to all elements.}
+\item{source_lang}{language of the text to be translated. If parameter
+\code{is.null}, the API guesses the language of the source. If input is of
+length 1, the same source language is applied to all elements.}
 
-\item{split_sentences}{if \code{TRUE}, the translation engine splits the input into sentences.
-If only one sentence is translated, it is recommended to set to \code{FALSE} to prevent
-the engine from unintentionally splitting the sentence.}
+\item{split_sentences}{if \code{TRUE}, the translation engine splits the
+input into sentences. If only one sentence is translated, it is recommended
+to set to \code{FALSE} to prevent the engine from unintentionally splitting
+the sentence.}
 
-\item{preserve_formatting}{if \code{TRUE}, the translation engine tries to preserve some aspects
-(e.g. punctuation at the beginning and end of the sentence, upper/lower case at the beginning
-of the sentence) of the formatting.}
+\item{preserve_formatting}{if \code{TRUE}, the translation engine tries to
+preserve some aspects (e.g. punctuation at the beginning and end of the
+sentence, upper/lower case at the beginning of the sentence) of the
+formatting.}
 
-\item{get_detect}{if \code{TRUE}, the language detected for the source text is included in
-the response.}
+\item{get_detect}{if \code{TRUE}, the language detected for the source text
+is included in the response.}
 
 \item{auth_key}{Authentication key.}
 }
 \value{
-If \code{get_detect} is set to \code{FALSE} a \code{character vector} containing the
-   translation is returned. Otherwise, a (\code{tibble}) is returned with the following columns:
+If \code{get_detect} is set to \code{FALSE} a
+\code{character vector} containing the translation is returned. Otherwise, a
+(\code{tibble}) is returned with the following columns:
 \itemize{
 \item \code{translation} the translated text.
 \item \code{source_lang} detected or specified language of the input text.
 }
 }
 \description{
-\code{toEnglish2} translates a text from an available language into English
-    using DeepL API Free. Use \code{available_languages2} to list all supported languages.
-    An authentication key is required to use this service. With the DeepL API Free package,
-    developers can translate up to 500,000 characters per month for free.
+\code{toEnglish2}, \code{toGerman2}, \code{toSpanish2}, \code{toFrench2},
+\code{toPortugese2}, \code{toChinese2}, \code{toRussian2} provide wrapper
+functions to translate texts from a list of available languages using the
+DeepL API Pro. Use \code{available_languages} to list all supported
+languages. An authentication key is required to use this service. The
+service costs depending on the number of translated characters.
 }
 \details{
-To get an authentication key, you need to register for a DeepL API Free
-    account (\url{https://www.deepl.com/pro#developer}).
+To get an authentication key, you need to register for a DeepL API
+Free account (\url{https://www.deepl.com/pro#developer}).
 }
 \examples{
 \dontrun{
