@@ -15,46 +15,50 @@ translate(
 )
 }
 \arguments{
-\item{text}{character vector to be translated. Only UTF8-encoded plain text is supported.
-An element can contain several sentences, but should not exceed 30kbytes.}
+\item{text}{character vector to be translated. Only UTF8-encoded plain text 
+is supported. An element can contain several sentences, but should not 
+exceed 30kbytes.}
 
-\item{target_lang}{target language of the translation. If input is of length 1, all elements
-are translated into the same language.}
+\item{target_lang}{target language of the translation. If input is of length 
+1, all elements are translated into the same language.}
 
-\item{source_lang}{language of the text to be translated. If parameter \code{is.null}, the
-API guesses the language of the source. If input is of length 1, the same source
-language is applied to all elements.}
+\item{source_lang}{language of the text to be translated. If parameter 
+\code{is.null}, the API guesses the language of the source. If input is of 
+length 1, the same source language is applied to all elements.}
 
-\item{split_sentences}{if \code{TRUE}, the translation engine splits the input into sentences.
-If only one sentence is translated, it is recommended to set to \code{FALSE} to prevent
-the engine from unintentionally splitting the sentence.}
+\item{split_sentences}{if \code{TRUE}, the translation engine splits the 
+input into sentences. If only one sentence is translated, it is recommended 
+to set to \code{FALSE} to prevent the engine from unintentionally splitting 
+the sentence.}
 
-\item{preserve_formatting}{if \code{TRUE}, the translation engine tries to preserve some aspects
-(e.g. punctuation at the beginning and end of the sentence, upper/lower case at the beginning
-of the sentence) of the formatting.}
+\item{preserve_formatting}{if \code{TRUE}, the translation engine tries to 
+preserve some aspects (e.g. punctuation at the beginning and end of the 
+sentence, upper/lower case at the beginning of the sentence) of the 
+formatting.}
 
-\item{get_detect}{if \code{TRUE}, the language detected for the source text is included in
-the response.}
+\item{get_detect}{if \code{TRUE}, the language detected for the source text 
+is included in the response.}
 
 \item{auth_key}{Authentication key.}
 }
 \value{
-If \code{get_detect} is set to \code{FALSE} a \code{character vector} containing the
-   translation is returned. Otherwise, a (\code{tibble}) is returned with the following columns:
+If \code{get_detect} is set to \code{FALSE} a 
+\code{character vector} containing the translation is returned. Otherwise, a 
+(\code{tibble}) is returned with the following columns:
 \itemize{
 \item \code{translation} the translated text.
 \item \code{source_lang} detected or specified language of the input text.
 }
 }
 \description{
-\code{translate} translates texts between different languages using DeepL API Pro.
-    Use \code{available_languages} to list all supported languages. An authentication key
-    is required to use this service. The service costs depending
-    on the number of translated characters.
+\code{translate} translates texts between different languages using DeepL 
+API Pro. Use \code{available_languages} to list all supported languages. An 
+authentication key is required to use this service. The service costs 
+depending on the number of translated characters.
 }
 \details{
-To get an authentication key, you need to register for a DeepL API Pro
-    account (\url{https://www.deepl.com/pro#developer}).
+To get an authentication key, you need to register for a DeepL API 
+Pro account (\url{https://www.deepl.com/pro#developer}).
 }
 \examples{
 \dontrun{
@@ -66,7 +70,11 @@ texts <- c("I like to translate texts.", "Ich übersetze gerne Texte.")
 translate(texts, target_lang = "FR", auth_key = "x")
 
 # Translate a single text into multiple target languages
-translate("I like to translate texts.", target_lang = c("FR", "DE", "IT"), auth_key = "x")
+translate(
+  text = "I like to translate texts.", 
+  target_lang = c("FR", "DE", "IT"), 
+  auth_key = "x"
+)
 
 # Translate multiple texts into different languages
 texts <- c("I like to translate texts.", "Ich übersetze gerne Texte.")

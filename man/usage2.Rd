@@ -10,12 +10,12 @@ usage2(auth_key = "your_key")
 \item{auth_key}{authentication key.}
 }
 \description{
-\code{usage2} returns the character usage and the configured limit for the current period of
-    a DeepL API Free account.
+\code{usage2} returns the character usage and the configured limit for the 
+current period of a DeepL API Free account.
 }
 \details{
-To get an authentication key, you need to register for a DeepL API Pro
-    account (\url{https://www.deepl.com/pro#developer}).
+To get an authentication key, you need to register for a DeepL API
+Pro account (\url{https://www.deepl.com/pro#developer}).
 }
 \examples{
 \dontrun{

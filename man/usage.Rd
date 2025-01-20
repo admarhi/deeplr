@@ -7,15 +7,16 @@
 usage(auth_key = "your_key")
 }
 \arguments{
-\item{auth_key}{authentication key of the corresponding DeepL API Pro account.}
+\item{auth_key}{authentication key of the corresponding DeepL API Pro 
+account.}
 }
 \description{
-\code{usage} returns the character usage and the configured limit for the current period of
-    a DeepL API Pro account.
+\code{usage} returns the character usage and the configured limit for the 
+current period of a DeepL API Pro account.
 }
 \details{
-To get an authentication key, you need to register for a DeepL API Pro
-    account (\url{https://www.deepl.com/pro#developer}).
+To get an authentication key, you need to register for a DeepL API 
+Pro account (\url{https://www.deepl.com/pro#developer}).
 }
 \examples{
 \dontrun{
