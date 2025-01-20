@@ -18,14 +18,16 @@ Returns a (\code{tibble}) with the following columns:
 \itemize{
 \item \code{text_id} position of the text in the character vector.
 \item \code{segment_id} ID of a text segment.
-\item \code{segment_text} text segment that is smaller than \code{max_size_bytes}
+\item \code{segment_text} text segment that is smaller than
+\code{max_size_bytes}
 }
 }
 \description{
 \code{split_text} splits texts into blocks of a maximum number of bytes.
 }
 \details{
-The function uses \code{tokenizers::tokenize_sentences} to split texts.
+The function uses \code{tokenizers::tokenize_sentences} to split
+texts.
 }
 \examples{
 \dontrun{

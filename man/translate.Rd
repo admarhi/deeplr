@@ -71,7 +71,6 @@ translate("I like to translate texts.", target_lang = c("FR", "DE", "IT"), auth_
 # Translate multiple texts into different languages
 texts <- c("I like to translate texts.", "Ich übersetze gerne Texte.")
 translate(texts, target_lang = c("FR", "IT"), auth_key = "x")
-
 }
 
 }

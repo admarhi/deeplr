@@ -13,8 +13,8 @@ available_languages2(auth_key = "your_key")
 \code{available_languages2} list all supported languages of DeepL API Free.
 }
 \details{
-To get an authentication key, you need to register for a DeepL API Free
-    account (\url{https://www.deepl.com/pro#developer}).
+To get an authentication key, you need to register for a DeepL API
+Free account (\url{https://www.deepl.com/pro#developer}).
 }
 \examples{
 \dontrun{
@@ -23,5 +23,6 @@ available_languages2(auth_key = "my_key")
 
 }
 \references{
-\href{https://www.deepl.com/pro#developer}{DeepL API documentations}
+\href{https://www.deepl.com/pro#developer}{DeepL API
+documentations}
 }

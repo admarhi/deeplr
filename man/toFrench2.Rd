@@ -60,9 +60,7 @@ toFrench2("Hallo Welt!", auth_key = "my_key")
 # Translate multiple texts and return the detected language
 texts <- c("Me llamo Fred.", "I'm a doctor.", "Ich komme aus der Schweiz.")
 toFrench2(texts, get_detect = T, auth_key = "x")
-
 }
-
 
 }
 \references{

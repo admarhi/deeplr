@@ -60,9 +60,7 @@ toJapanese2("Hallo Welt!", auth_key = "my_key")
 # Translate multiple texts and return the detected language
 texts <- c("My name is Fred.", "Je suis médecin.", "Ich komme aus der Schweiz.")
 toJapanese2(texts, get_detect = T, auth_key = "x")
-
 }
-
 
 }
 \references{

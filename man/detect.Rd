@@ -7,19 +7,21 @@
 detect(text, auth_key = "your_key")
 }
 \arguments{
-\item{text}{character vector with texts to classify. Only UTF8-encoded plain text is supported.
-An element can contain several sentences, but should not exceed 30kbytes.}
+\item{text}{character vector with texts to classify. Only UTF8-encoded plain
+text is supported. An element can contain several sentences, but should not
+exceed 30kbytes.}
 
 \item{auth_key}{Authentication key.}
 }
 \description{
 \code{detect} guesses the language of a text using DeepL API Pro.
-    Use \code{available_languages} to list all supported languages. An authentication key
-    is required to use this service. The service costs depending on the number of translated characters.
+Use \code{available_languages} to list all supported languages. An
+authentication key is required to use this service. The service costs
+depending on the number of translated characters.
 }
 \details{
-To get an authentication key, you need to register for a DeepL API Pro
-    account (\url{https://www.deepl.com/pro#developer}).
+To get an authentication key, you need to register for a DeepL API
+Pro account (\url{https://www.deepl.com/pro#developer}).
 }
 \examples{
 \dontrun{
@@ -28,5 +30,6 @@ detect("My name is Hans.", auth_key = "my_key")
 
 }
 \references{
-\href{https://www.deepl.com/pro#developer}{DeepL API documentations}
+\href{https://www.deepl.com/pro#developer}{DeepL API
+documentations}
 }
