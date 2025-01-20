@@ -8,10 +8,11 @@
 #'
 #' @param auth_key authentication key.
 #'
-#' @details To get an authentication key, you need to register for a DeepL API Pro
-#'     account (\url{https://www.deepl.com/pro#developer}).
+#' @details To get an authentication key, you need to register for a DeepL API
+#' Pro account (\url{https://www.deepl.com/pro#developer}).
 #'
-#' @references \href{https://www.deepl.com/pro#developer}{DeepL API documentations}
+#' @references \href{https://www.deepl.com/pro#developer}{DeepL API
+#' documentations}
 #'
 #' @export
 #'
@@ -21,18 +22,16 @@
 #' }
 #'
 available_languages <- function(auth_key = "your_key") {
-
   # DeepL API call
   response <- httr::POST(
     url = "https://api.deepl.com/v2/languages",
     httr::add_headers("Authorization" = paste("DeepL-Auth-Key", auth_key))
-    )
+  )
 
   response_check(response)
 
   tibble::tibble(
     language = purrr::map_chr(httr::content(response), "language"),
     name = purrr::map_chr(httr::content(response), "name")
-    )
-
+  )
 }

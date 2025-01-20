@@ -1,8 +1,8 @@
 #' Translate texts into Common Languages using DeepL API Pro
 #'
-#' \code{toEnglish}, \code{toGerman}, \code{toSpanish}, \code{toFrench}, 
-#' \code{toPortugese}, \code{toChinese}, \code{toRussian} provide wrapper 
-#' functions to translate texts from a list of available languages using the 
+#' \code{toEnglish}, \code{toGerman}, \code{toSpanish}, \code{toFrench},
+#' \code{toPortugese}, \code{toChinese}, \code{toRussian} provide wrapper
+#' functions to translate texts from a list of available languages using the
 #' DeepL API Pro. Use \code{available_languages} to list all supported
 #' languages. An authentication key is required to use this service. The
 #' service costs depending on the number of translated characters.
